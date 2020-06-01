@@ -1,14 +1,18 @@
 # AVC
- AVC Plan
+AVC Plan
+
 Team Name: Team 37
+
 Team Members & contact info:
 Vincent Alvarez
 Dilitha Wijayapala
 Shruti Raja
 Harper Doak
 Samuel Marshall
+
 Communication tool:
 Discord
+
 Roles:
 Shruti Raja - Project Manager (organising team meetings, reporting regularly on progress)
 
