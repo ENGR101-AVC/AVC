@@ -35,4 +35,4 @@ Discord
 ### Plan and Milestones
 |Date|Objectives|Due Date|Item Due|Conflicts|Tasks|
 |----|----|-----|----|---|---|
-|...|Start the project|4 June|Testing Code|...|**All** Complete AVC Plan<br>**All** Install library and run testing code|
+|1/6/2020|Start the project|4 June|Testing Code|...|**All** Complete AVC Plan<br>**All** Install library and run testing code|1
