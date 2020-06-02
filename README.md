@@ -4,11 +4,21 @@ AVC Plan
 Team Name: Team 37
 
 Team Members & contact info:
+
 Vincent Alvarez
+Email: alvarevinc@myvuw.ac.nz
+
 Dilitha Wijayapala
+Email: wijayagama@myvuw.ac.nz
+
 Shruti Raja
+Email: rajashru@myvuw.ac.nz
+
 Harper Doak
+Email:doakharp@myvuw.ac.nz
+
 Samuel Marshall
+Email: marshasamu@myvuw.ac.nz
 
 Communication tool:
 Discord
