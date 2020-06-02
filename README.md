@@ -36,4 +36,4 @@ Discord
 |Date|Objectives|Due Date|Item Due|Conflicts|Tasks|
 |----|----|-----|----|---|---|
 |1/6/2020|Start the project|4 June|Testing Code|...|**All** Complete AVC Plan<br>**All** Install library and run testing code|1
-|..|Core|June 11|Core Code|...|...|
+|...|Core|June 11|Core Code|...|...|
