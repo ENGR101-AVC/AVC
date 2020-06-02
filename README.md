@@ -15,7 +15,7 @@ Shruti Raja
 Email: rajashru@myvuw.ac.nz
 
 Harper Doak
-Email:doakharp@myvuw.ac.nz
+Email: doakharp@myvuw.ac.nz
 
 Samuel Marshall
 Email: marshasamu@myvuw.ac.nz
