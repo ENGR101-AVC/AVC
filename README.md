@@ -1,6 +1,7 @@
 # AVC
 ## Plan
 Team Name: Team 37
+
 Github: https://github.com/ENGR101-AVC
 ### Team Members & Contact Info:
 **Vincent Alvarez**
@@ -35,5 +36,9 @@ Discord
 ### Plan and Milestones
 |Date|Objectives|Due Date|Item Due|Conflicts|Tasks|
 |----|----|-----|----|---|---|
-|1/6/2020|Start the project|4 June|Testing Code|...|**All** Complete AVC Plan<br>**All** Install library and run testing code|1
-|...|Core|June 11|Core Code|...|Sam and Harper will write the core code of the robot<br>Core Code will be fully tested by Vincent and Dili<br>**All** keeps personal log as well as regular reports updates on github|
+|1/06|Start the project|4 June|Testing Code|...|**[All]** Complete AVC Plan<br>**[All]** Install library and run testing code|
+|4/06|Core|June 12|Core Code|...|**[Sam]** **[Harper]** Core Code Completed by 6th<br>**[Vincent]** **[Dilitha]** Core Code fully tested by 7th<br>**[Shruti]** Plan meetings, set up report|
+|8/06|Write up weekly report||||**[All]** Meet up and discuss weekly progress|
+|9/06|Finish completion code|June 19|Completion Code||**[Sam]** **[Harper]** Completion Code completed by 13th<br>**[Vincent]** **[Dilitha]** Completion Code fully tested by 14th<br>**[Shruti]** Plan next weekly meeting, continue writing report|
+|13/06|Finish completion begin challenge|June 19th|Challenge code|||**[Sam]** **[Harper]** Challenge code completed by 18th or 19th<br>**[Vincent]** **[Dilitha]** Test code as soon as possible **[Shruti]** Continue report write up and plan final meeting|
+|19/06|Final meeting|June 19|||**[All]** Meet up and discuss project, finish writing up report|
