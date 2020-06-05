@@ -1,4 +1,7 @@
 # AVC
+## Installation
+Todo
+
 ## Plan
 Team Name: Team 37
 
@@ -44,6 +47,9 @@ Discord
 |19/06|Final meeting|June 19|||**[All]** Meet up and discuss project, finish writing up report and personal logs <br> **[Architects and Testers]** Check all functions are 80 lines or less, clean up code|
 
 Deadlines for challenge section are not fixed, dependent on how quickly we can finish core and completion. 
-## Installation
+## Testing 
 
-Todo
+## Team Log
+|Date|Tasks|
+|---|---|
+|04/06|**Dilitha** Changed role to Architect/Writer, uploaded code for core section<br>Yet to be tested|
