@@ -1,6 +1,23 @@
 # AVC
 ## Installation
-Todo
+*For any version make sure Geany is installed and can compile, build and run programs*
+### Installing SFML
+#### Mac 
+Install Homebrew by typing this into the terminal.
+>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+Once Homebrew is installed, paste this into terminal to install SFML:
+>brew install sfml 
+
+Open Geany and under build commands paste these flags after the pre-existing flags. 
+>-lsfml-graphics -lsfml-window -lsfml-system -lsfml-network 
+### Downloading Our Code
+Downloading code is done by cloning our github repository. In Github Desktop, we can do this by going to Current Repository > Add > URL and paste in https://github.com/ENGR101-AVC/AVC.git
+
+### Compile Build and Run
+Our make file does all of these steps automatically by executing make (MAC) or mingw-make(Windows).
+To run programs, first you have to compile, build and then run (F8, F9 and then F5).
+To make the robot work, you have to first compile, build and run the server3.cpp file. Then you have to compile, build and run the robot.cpp file. 
 
 ## Plan
 Team Name: Team 37
