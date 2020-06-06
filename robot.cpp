@@ -1,5 +1,5 @@
 #include "robot.hpp"
-//Core Code for AVC
+//Core Code for AVC project
 int main(){
 	if (initClientRobot() !=0){
 		std::cout<<" Error initializing robot"<<std::endl;
