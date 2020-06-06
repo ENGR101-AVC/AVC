@@ -25,7 +25,7 @@ Open the C:SFML folder and open the folder "include" and copy the file path for 
 
 Then, delete the server3.o file and server3 FILE from the AVC_server folder and the robot.o and robot FILE from the AVC_robot folder.
 
-Finally, open server3.cpp and robot.cpp in geany and go to "Set Build Commands" which should be located in the "Build" section of the nav bar. In the "Independant commands" in 1st row, 2nd column change "make" to "mingw32-make".
+Finally, open server3.cpp and robot.cpp in geany and go to "Set Build Commands" which should be located in the "Build" section of the nav bar. In the "Independant commands" in the 1st row, 2nd column change "make" to "mingw32-make".
 
 Instead of using compile, build and run press shift+F9 to make the code. Do this make command for both server3.cpp and robot.cpp and they should  both successfully compile (robot.cpp will give warnings before successfully compiling but that's okay). Then press F5 to run the two .cpp files. Make sure you run server3.cpp first before running robot.cpp or else the program will not work.
 
