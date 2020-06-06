@@ -14,13 +14,26 @@ Open Geany and under build commands paste these flags after the pre-existing fla
 ### Downloading Our Code
 Downloading code is done by cloning our github repository. In Github Desktop, we can do this by going to Current Repository > Add > URL and paste in https://github.com/ENGR101-AVC/AVC.git
 
+#### Windows
+First you must install the SFML library from this site: https://www.sfml-dev.org/download/sfml/2.5.1/, if you are running on geany and minGW can sure you download the minGW versions of the library and it's corresponding version (32 bit or 64 bit).
+
+Afterwards, create a folder in your (C:) drive called SFML and move the downloaded zip file into this folder and unzip it.
+
+Now download the AVC_robot and AVC_server folders and unzip them into your folder of choice.
+
+Open the C:SFML folder and open the folder "include" and copy the file path for it. Then open the makefile file in the AVC_robot folder and paste the file path into line that starts with "INCLUDE" just after the "-I" and delete the place holder path. Open C:SFML again and out the file lib and copy the file path. Paste the lib file path in the that starts with "LIBS" after "-L" and delete the place holder path.  Repear this instruction but instead use the makefile file in the AVC_server folder.
+
+Then, delete the server3.o file and server3 FILE from the AVC_server folder and the robot.o and robot FILE from the AVC_robot folder.
+
+Finally, open server3.cpp and robot.cpp in geany and go to "Set Build Commands" which should be located in the "Build" section of the nav bar. In the "Independant commands" in 1st row, 2nd column change "make" to "mingw32-make".
+
+Instead of using compile, build and run press shift+F9 to make the code. Do this make command for both server3.cpp and robot.cpp and they should  both successfully compile (robot.cpp will give warnings before successfully compiling but that's okay). Then press F5 to run the two .cpp files. Make sure you run server3.cpp first before running robot.cpp or else the program will not work.
+
+
 ### Compile Build and Run (Mac)
 Our make file does all of these steps automatically by executing make (MAC) or mingw-make(Windows).
 To run programs, first you have to compile, build and then run (F8, F9 and then F5).
 To make the robot work, you have to first compile, build and run the server3.cpp file. Then you have to compile, build and run the robot.cpp file. 
-
-### Running on Windows
-
 
 ## Plan
 Team Name: Team 37
