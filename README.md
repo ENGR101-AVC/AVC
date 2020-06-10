@@ -11,9 +11,6 @@ Once Homebrew is installed, paste this into terminal to install SFML:
 
 Open Geany and under build commands paste these flags after the pre-existing flags. 
 >-lsfml-graphics -lsfml-window -lsfml-system -lsfml-network 
-### Downloading Our Code
-Downloading code is done by cloning our github repository. In Github Desktop, we can do this by going to Current Repository > Add > URL and paste in https://github.com/ENGR101-AVC/AVC.git
-
 #### Windows
 First you must install the SFML library from this site: https://www.sfml-dev.org/download/sfml/2.5.1/, if you are running on geany and minGW can sure you download the minGW versions of the library and it's corresponding version (32 bit or 64 bit).
 
@@ -29,6 +26,8 @@ Finally, open server3.cpp and robot.cpp in geany and go to "Set Build Commands" 
 
 Instead of using compile, build and run press shift+F9 to make the code. Do this make command for both server3.cpp and robot.cpp and they should  both successfully compile (robot.cpp will give warnings before successfully compiling but that's okay). Then press F5 to run the two .cpp files. Make sure you run server3.cpp first before running robot.cpp or else the program will not work.
 
+### Downloading Our Code
+Downloading code is done by cloning our github repository. In Github Desktop, we can do this by going to Current Repository > Add > URL and paste in https://github.com/ENGR101-AVC/AVC.git
 
 ### Compile Build and Run (Mac)
 Our make file does all of these steps automatically by executing make (MAC) or mingw-make(Windows).
