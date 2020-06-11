@@ -51,4 +51,5 @@ Average time taken: 1 min and 17.19 sec
 |09/06|**Samuel** Started on method for turning on the spot and method for obstacle avoidance.
 |10/06|**All** Team meeting discussing group progress <br> **Dilitha** Uploaded code for completion, if testing shows it works, it can be added to the master branch|
 |11/06|**Vincent** Tested completion version of the code with 10 attempts. All attempts were successful. Updated WIKI testing tables.|
+*Next team meeting is on Saturday at 1pm*
 
