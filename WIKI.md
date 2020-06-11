@@ -39,12 +39,16 @@ The robot must follow the white line on the map and reach the flag without it to
 Average time taken: 1 min and 17.19 sec
 
 ## Team Log
+
+*Team meetings are done in Discord calls*
+
 |Date|Tasks|
 |---|---|
 |04/06|**Dilitha** Changed role to Architect/Writer, uploaded code for core section<br>Yet to be tested|
+|05/06|**All** Team meeting, discussing progress, and next steps|
 |06/06|**Vincent** Tested core code with 10 attempts, all attempts were successful with the robot reaching the flag in under 5 minutes.|
 |09/06|**Harper** Started writing code for Completion
 |09/06|**Samuel** Started on method for turning on the spot and method for obstacle avoidance.
-|10/06|**Dilitha** Uploaded code for completion, if testing shows it works, it can be added to the master branch|
+|10/06|**All** Team meeting discussing group progress <br> **Dilitha** Uploaded code for completion, if testing shows it works, it can be added to the master branch|
 |11/06|**Vincent** Tested completion version of the code with 10 attempts. All attempts were successful. Updated WIKI testing tables.|
 
