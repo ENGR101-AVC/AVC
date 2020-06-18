@@ -20,11 +20,11 @@ Now download the AVC_robot and AVC_server folders and unzip them into your folde
 
 Open the C:SFML folder and open the folder "include" and copy the file path for it. Then open the makefile file in the AVC_robot folder with geany and paste the file path into the line that starts with "INCLUDE" just after the "-I" and delete the place holder path. Open C:SFML again and open the file "lib" and copy the file path. Paste the lib file path in the line that starts with "LIBS" after "-L" and delete the place holder path.  Repeat this instruction but instead use the makefile file in the AVC_server folder.
 
-Then, delete the server3.o file from the AVC_server folder and the robot.o from the AVC_robot folder.
-
 Finally, open server3.cpp and robot.cpp in geany and go to "Set Build Commands" which should be located in the "Build" section of the nav bar. In the "Independant commands" in the 1st row, 2nd column change "make" to "mingw32-make".
 
 Instead of using compile, build and run press shift+F9 to make the code. Do this make command for both server3.cpp and robot.cpp and they should  both successfully compile (robot.cpp will give warnings before successfully compiling but that's okay). Then press F5 to run the two .cpp files. Make sure you run server3.cpp first before running robot.cpp or else the program will not work.
+
+If you try and compile the two .cpp files but are unsuccessful try and delete the server3.o file from the AVC_server folder and the robot.o from the AVC_robot folder.
 
 ### Downloading Our Code
 Downloading code is done by cloning our github repository. In Github Desktop, we can do this by going to Current Repository > Add > URL and paste in https://github.com/ENGR101-AVC/AVC.git
