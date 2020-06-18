@@ -31,100 +31,84 @@ int getWhite(int whitePixArray[]){
 	
 }
 
-int getRed(int redPixArray[]){
-	int redRatio = 0;
-	for (int i=0;i<cameraView.width;i++){
-		int redpix = get_pixel(cameraView,50,i,0);//getting the red value of the pixel
-		int boolRed=0;
-		if(redpix==255){
-			boolRed =1;
-		} 
-		else if(redpix!=255){
-			boolRed=0;
+bool wallLeft() {
+	bool wall = false;
+	for(int y = 0; y < cameraView.height; y++){
+		for(int x = 0; x < cameraView.width/3; x++){
+			if(get_pixel(cameraView, y, x, 0) == 255 && get_pixel(cameraView, y, x, 1) == 0 && get_pixel(cameraView, y, x, 2) ==0){
+					wall = true;
+			}
 		}
-		//std::cout<<boolRed<<" ";
-		redPixArray[i]=boolRed;
 	}
-	for (int n=0;n<cameraView.width;n++){
-		if(redPixArray[n]==1){
-			redRatio=n; //finds first white pixel and exits for loop
-			return redRatio;
-		}
-		
-	}	
-	for (int n=0;n<cameraView.width;n++){//comletion turning section
-		if(redPixArray[n]!=(1)){
-			redRatio=n; 
-		}	
-	}	
-	return redRatio;
 	
+	return wall;
+}
+	
+bool wallMiddle() {
+	bool wall = false;
+	for(int y = 0; y < cameraView.height; y++){
+		for(int x = cameraView.width/3; x < (cameraView.width/3)*2; x++){
+			if(get_pixel(cameraView, y, x, 0) == 255 && get_pixel(cameraView, y, x, 1) == 0 && get_pixel(cameraView, y, x, 2) ==0){
+					wall = true;
+			}
+		}
+	}
+	
+	return wall;
+}
+bool wallRight() {
+	bool wall = false;
+	for(int y = 0; y < cameraView.height; y++){
+		for(int x = (cameraView.width/3)*2; x < (cameraView.width/3)*3; x++){
+			if(get_pixel(cameraView, y, x, 0) == 255 && get_pixel(cameraView, y, x, 1) == 0 && get_pixel(cameraView, y, x, 2) ==0){
+					wall = true;
+			}
+		}
+	}
+	
+	return wall;
 }
 
-void drive(int whiteRatio, int redRatio){
+void drive(int whiteRatio){
 	double vLeft = 30.0;
 	double vRight = 30.0;
 	
-	if(redRatio<30){//treats each image as if it has 5 sections if pixel is not in the middle section robot moves accordingly
-		if(whiteRatio<30){
-			vLeft = 20;
-			vRight = 30;
-			std::cout<<"\n WHITE detected HARD LEFT \n";
-		}else{
+	if (wallLeft() == true){
+		std::cout<<"\n Wall on left \n";
+		vLeft = 40.0;
+	}else{
+		vLeft = 30;
+	}
+	if (wallRight() == true){
+		std::cout<<"\n Wall on right \n";
+		vRight = 40.0;
+	}else{
+		vRight = 30;
+	}
+	if (wallMiddle() == true){
+		std::cout<<"\n Wall in middle \n";
+		if (wallLeft() == true){
+			std::cout<<"\n Wall in middle AND LEFT \n";
 			vLeft = 40;
-			vRight = 15;
-			std::cout<<"\n RED detected HARD LEFT \n";
-		}
-	}	
-	if((redRatio>30)&&(redRatio<30)){
-		if((whiteRatio>30)&&(whiteRatio<30)){
-			vLeft = 40;
-			vRight = 25;
-			std::cout<<" \n WHITE detected MEDIUM LEFT \n";
-		}else{
-			vLeft = 50;
 			vRight = 10;
-			std::cout<<" \n RED detected MEDIUM LEFT \n";
 		}
-	}	
-	if((redRatio>60)&&(redRatio<90)){//middle section of image
-		if((whiteRatio>60)&&(whiteRatio<90)){//middle section of image
-			vLeft = 30;
-			vRight = 30;
-			std::cout<<"\n WHITE detected MIDDLE \n";
-		}else{
-			vLeft = 40;
-			vRight = -30;
-			std::cout<<"\n RED detected MIDDLE  WE GOTTA SWERVEEEEEEEE\n";
-		}
-	}	
-	if((redRatio>90)&&(redRatio<120)){
-		if((whiteRatio>90)&&(whiteRatio<120)){
-			vLeft = 25;
-			vRight = 20;
-			std::cout<<"\n WHITE detected MEDIUM RIGHT \n";
-		}else{
+		if (wallRight() == true){
+			std::cout<<"\n Wall in middle AND RIGHT \n";
 			vLeft = 10;
-			vRight = 50;
-			std::cout<<"\n RED detected MEDIUM RIGHT \n";
-		}
-	}	
-	if((redRatio>120)&&(redRatio<150)){
-		if((whiteRatio>120)&&(whiteRatio<149)){
-			vLeft = 30;
-			vRight = 20;
-			std::cout<<"\n WHITE detected HARD RIGHT \n";
-		if (whiteRatio > 149){
-			vLeft = 30;
-			vRight = 20;
-			std::cout<<"\n White detected in last pixel of the array (no real white) \n";
-		}
-		}else{
-			vLeft = 15;
 			vRight = 40;
-			std::cout<<"\n RED detected HARD RIGHT \n";
+			
+		}
+		if (wallLeft() == true && wallRight() == true){
+			std::cout<<"Wall ON ALL SIDES";
+			vLeft = 10;
+			vRight = -10;
+		}
+		if (wallLeft() == false && wallRight() == false){
+			vLeft = 10;
+			vRight = -10;
 		}
 	}
+	
 	
     setMotors(vLeft,vRight);   
     std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<std::endl;
@@ -142,10 +126,8 @@ int main(){
     while(1){
 		takePicture();
 		int whiteRatio = getWhite(whitePixArray);
-		int redRatio = getRed(redPixArray);
-		drive(whiteRatio, redRatio);
+		drive(whiteRatio);
 		usleep(10000);
   } //while
 
 } // main
-
