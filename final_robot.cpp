@@ -1,6 +1,8 @@
 #include "robot.hpp"
 
-void driveWhite(int whiteRatio){
+bool maze; //simple boolean check to see if the robot is in a maze or is in core/completion
+
+void drive(int whiteRatio){
 	double vLeft = 30.0;
 	double vRight = 30.0;
 	if(whiteRatio<30){//treats each image as if it has 5 sections if pixel is not in the middle section robot moves accordingly
@@ -30,13 +32,13 @@ void driveWhite(int whiteRatio){
 	if(whiteRatio==0){//completion turning 	
 		vLeft = 5;
 		vRight = 30;
-	}		
-    setMotors(vLeft,vRight);
+	}	
+    setMotors(vLeft,vRight);   
     std::cout<<" vLeft="<<vLeft<<"  vRight="<<vRight<<std::endl;
 	
-}	
+}
 
-bool hasRed(){
+bool getRed(){
 	bool red = false;
 	for (int y = 0; y < cameraView.height; y++) { 
 		for (int x = 0; x < cameraView.width; x++) { 
@@ -96,7 +98,7 @@ bool movingLeft(){//checking if the left wall has moved, robot should recorrect 
 void driveRed(){ //main idea for robot is to try and follow a left line at all times
 	double vLeft = 30.0;
 	double vRight = 30.0;
-	if(hasRed()==true){
+	if(getRed()==true){
 		if(wallLeft()==false){
 			vLeft = 22;
 			vRight = 30;
@@ -109,9 +111,9 @@ void driveRed(){ //main idea for robot is to try and follow a left line at all t
 			vLeft = 30;
 			vRight = 20;
 		}
-		else{ //Else go forwards
-			vLeft = 40;
-			vRight = 40;
+		else{ 
+			vLeft = 30;
+			vRight = 30;
 		}
 	}else{
 		vLeft 	= 300; //this is how the robot makes it out of the gap
@@ -125,21 +127,34 @@ void driveRed(){ //main idea for robot is to try and follow a left line at all t
 	
 }	
 
-void getRatio(int whitePixArray[]){
-	int ratio = 0;
-	for (int n=0;n<cameraView.width;n++){
-		if(whitePixArray[n]!=(1)){
-			ratio=n; 
-		}	
-	}	
+int getWhite(int whitePixArray[]){
+	int whiteRatio = 0;
+	for (int i=0;i<cameraView.width;i++){
+		int pix = get_pixel(cameraView,50,i,3);//getting the color value of the pixel (not individual colours)
+		int boolWhite=0;
+		if(pix==255){
+			boolWhite =1;
+		} 
+		else if(pix!=255){
+			boolWhite=0;
+		}
+		std::cout<<boolWhite<<" ";
+		whitePixArray[i]=boolWhite;
+	}
 	for (int n=0;n<cameraView.width;n++){
 		if(whitePixArray[n]==1){
-			ratio=n; 
-			break;
+			whiteRatio=n; //finds first white pixel and exits for loop
+			return whiteRatio;
 		}
 		
 	}	
-	driveWhite(ratio);
+	for (int n=0;n<cameraView.width;n++){//comletion turning section
+		if(whitePixArray[n]!=(1)){
+			whiteRatio=n; 
+		}	
+	}	
+	return whiteRatio;
+	
 }
 
 int main(){
@@ -170,13 +185,20 @@ int main(){
 				whiteCount = whiteCount - 1;   
 			}	
 		}
-
-		if(whiteCount > 0){
-			getRatio(whitePixArray);
+		if(getRed()==true){
+			maze = 1;
 		}	
-		if(whiteCount == 0){
+		if(whiteCount > 0){
+			maze = 0;
+		}	
+		if(maze == 0){
+			int whiteRatio = getWhite(whitePixArray);
+			drive(whiteRatio);
+		}	
+		if(maze == 1){
 			driveRed();
 		}
+		std::cout<<maze<<std::endl;
        usleep(10000);
   } //while
 
