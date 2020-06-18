@@ -20,7 +20,7 @@ Now download the AVC_robot and AVC_server folders and unzip them into your folde
 
 Open the C:SFML folder and open the folder "include" and copy the file path for it. Then open the makefile file in the AVC_robot folder with geany and paste the file path into the line that starts with "INCLUDE" just after the "-I" and delete the place holder path. Open C:SFML again and open the file "lib" and copy the file path. Paste the lib file path in the line that starts with "LIBS" after "-L" and delete the place holder path.  Repeat this instruction but instead use the makefile file in the AVC_server folder.
 
-Then, delete the server3.o file and server3 FILE from the AVC_server folder and the robot.o and robot FILE from the AVC_robot folder.
+Then, delete the server3.o file from the AVC_server folder and the robot.o from the AVC_robot folder.
 
 Finally, open server3.cpp and robot.cpp in geany and go to "Set Build Commands" which should be located in the "Build" section of the nav bar. In the "Independant commands" in the 1st row, 2nd column change "make" to "mingw32-make".
 
