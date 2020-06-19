@@ -31,11 +31,15 @@ If you try and compile the two .cpp files but are unsuccessful try and delete th
 
 ### Downloading Our Code
 Downloading code is done by cloning our github repository. In Github Desktop, we can do this by going to Current Repository > Add > URL and paste in https://github.com/ENGR101-AVC/AVC.git
+There are two versions available, one for Mac and one for Windows. 
 
 ### Compile Build and Run (Mac)
-Our make file does all of these steps automatically by executing make (MAC) or mingw-make(Windows).
+Our make file does all of these steps automatically by executing make.
 To run programs, first you have to compile, build and then run (F8, F9 and then F5).
-To make the robot work, you have to first compile, build and run the server3.cpp file. Then you have to compile, build and run the robot.cpp file. 
+To make the robot work, you have to first compile, build and run the server3.cpp file found in the server folder. Then you have to compile, build and run the robot.cpp file found in the robot folder. 
+
+### Changing the Map
+You can change the map by editing the config.txt file in server folder. By default it is set to core.txt. 
 
 ## Initial Plan
 Team Name: Team 37
