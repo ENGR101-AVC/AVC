@@ -1,24 +1,8 @@
 # AVC
-## Installation
+## Installation (for Windows)
 ### Installing Geany
-#### Geany for Mac 
-First go to https://www.geany.org/download/releases/
-From here download and install geany-1.36_osx-2.dmg. This is the Mac version of Geany and C++ should work from there. 
-#### Geany for Windows
-*For any version make sure Geany is installed and can compile, build and run programs*
-
 Go to https://geany.org/download/releases/ and click "geany-1.36_setup.exe" in the Windows row. This will download geany onto your machine. Then go to https://sourceforge.net/projects/tdm-gcc/ and click the download button to download the TDM_GCC Compiler installer. Open up the geany setup and click "I Agree", choose the default components, choose a place of your liking to download it, and install the software and click finish. Open up the TDM-GCC setup, click create and select the "MinGW-w64 (32-bit and 64-bit)" edition. Click next for all options unless you would like to make your own modifications then click install and finish. Geany should be fully functional on your Windows machine now.
 ### Installing SFML
-#### Mac 
-Install Homebrew by typing this into the terminal.
->/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-
-Once Homebrew is installed, paste this into terminal to install SFML:
->brew install sfml 
-
-Open Geany and under build commands paste these flags after the pre-existing flags. 
->-lsfml-graphics -lsfml-window -lsfml-system -lsfml-network 
-#### Windows
 First you must install the SFML library from this site: https://www.sfml-dev.org/download/sfml/2.5.1/, if you are running on geany and minGW can sure you download the minGW versions of the library and it's corresponding version (32 bit or 64 bit).
 
 Afterwards, create a folder in your (C:) drive called SFML and move the downloaded zip file into this folder and unzip it.
@@ -35,12 +19,6 @@ If you try and compile the two .cpp files but are unsuccessful try and delete th
 
 ### Downloading Our Code
 Downloading code is done by cloning our github repository. In Github Desktop, we can do this by going to Current Repository > Add > URL and paste in https://github.com/ENGR101-AVC/AVC.git
-There are two versions available, one for Mac and one for Windows. 
-
-### Compile Build and Run (Mac)
-Our make file does all of these steps automatically by executing make.
-To run programs, first you have to compile, build and then run (F8, F9 and then F5).
-To make the robot work, you have to first compile, build and run the server3.cpp file found in the server folder. Then you have to compile, build and run the robot.cpp file found in the robot folder. 
 
 ### Changing the Map
 You can change the map by editing the config.txt file in server folder. By default it is set to core.txt. 
