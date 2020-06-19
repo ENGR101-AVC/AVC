@@ -19,7 +19,7 @@ First you must install the SFML library from this site: https://www.sfml-dev.org
 
 Afterwards, create a folder in your (C:) drive called SFML and move the downloaded zip file into this folder and unzip it.
 
-Now download the AVC_Robot_Windows folder from the top of the page and put them in which ever folder you like.
+Now download the AVC_master branch, unzip the folder anywhere and copy out the AVC_Robot_Windows folder and save it anywhere you like.
 
 Open the C:SFML folder and open the folder "include" and copy the file path for it. Then open the makefile file in the AVC_robot folder with geany and paste the file path into the line that starts with "INCLUDE" just after the "-I" and delete the place holder path. Open C:SFML again and open the file "lib" and copy the file path. Paste the lib file path in the line that starts with "LIBS" after "-L" and delete the place holder path.  Repeat this instruction but instead use the makefile file in the AVC_server folder.
 
