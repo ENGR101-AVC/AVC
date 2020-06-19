@@ -1,5 +1,8 @@
 # AVC
 ## Installation
+### Installing Geany
+#### Geany for Mac 
+#### Geany for Windows
 *For any version make sure Geany is installed and can compile, build and run programs*
 ### Installing SFML
 #### Mac 
@@ -34,7 +37,7 @@ Our make file does all of these steps automatically by executing make (MAC) or m
 To run programs, first you have to compile, build and then run (F8, F9 and then F5).
 To make the robot work, you have to first compile, build and run the server3.cpp file. Then you have to compile, build and run the robot.cpp file. 
 
-## Plan
+## Initial Plan
 Team Name: Team 37
 
 Github: https://github.com/ENGR101-AVC
