@@ -2,6 +2,8 @@
 ## Installation
 ### Installing Geany
 #### Geany for Mac 
+First go to https://www.geany.org/download/releases/
+From here download and install geany-1.36_osx-2.dmg. This is the Mac version of Geany and C++ should work from there. 
 #### Geany for Windows
 *For any version make sure Geany is installed and can compile, build and run programs*
 ### Installing SFML
