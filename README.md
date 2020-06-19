@@ -6,6 +6,7 @@ First go to https://www.geany.org/download/releases/
 From here download and install geany-1.36_osx-2.dmg. This is the Mac version of Geany and C++ should work from there. 
 #### Geany for Windows
 *For any version make sure Geany is installed and can compile, build and run programs*
+
 Go to https://geany.org/download/releases/ and click "geany-1.36_setup.exe" in the Windows row. This will download geany onto your machine. Then go to https://sourceforge.net/projects/tdm-gcc/ and click the download button to download the TDM_GCC Compiler installer. Open up the geany setup and click "I Agree", choose the default components, choose a place of your liking to download it, and install the software and click finish. Open up the TDM-GCC setup, click create and select the "MinGW-w64 (32-bit and 64-bit)" edition. Click next for all options unless you would like to make your own modifications then click install and finish. Geany should be fully functional on your Windows machine now.
 ### Installing SFML
 #### Mac 
